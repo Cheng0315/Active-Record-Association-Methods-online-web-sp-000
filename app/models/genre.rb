@@ -11,6 +11,6 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    self.artists.tap {|o| o.name}
+    self.artists.map {|o| o.name}
   end
 end
